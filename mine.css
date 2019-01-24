@@ -1,0 +1,26 @@
+body {
+    background-color: #fff6ea;
+}
+table {
+    border-collapse:collapse;
+    border:1px solid #7f7f7f;
+}
+td {
+    border:1px solid #7f7f7f;
+    width:50px;
+    height:50px;
+    text-align:center; 
+    background-color: bisque
+}
+#timer {
+    font-size: 32px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#words {
+    font-size: 24px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#highscores {
+    border-collapse: collapse;
+    background-color: #eaf4ff;
+}

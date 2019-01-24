@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Minesweeper</title>
+    <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+        apiKey: "AIzaSyCOMxcVcRVHQ2gLkvV-YicxVhVGP2b0Z0I",
+        authDomain: "minesweeper-e6d46.firebaseapp.com",
+        databaseURL: "https://minesweeper-e6d46.firebaseio.com",
+        projectId: "minesweeper-e6d46",
+        storageBucket: "minesweeper-e6d46.appspot.com",
+        messagingSenderId: "350479774250"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <style src='mine.css'>
+    </style>
+    <link rel='stylesheet' href='./mine.css'>
+</head>
+<body>
+    <div class='row'>
+        <div class = 'col-sm-1' id='timer'>
+            <p>Time: 0</p>
+        </div>
+
+        <div class= 'col-sm-1' id='reset'>
+            <button id='reset' type="button" class="btn btn-warning btn-lg">Reset</button>
+        </div>
+
+        <div class='col-sm-1' id='easydiv'>
+            <button id='easy' type='button' class='btn btn-success btn-lg'>Easy</button>
+        </div>
+
+        <div class='col-sm-1' id='mediumdiv'>
+            <button id='medium' type='button' class='btn btn-warning btn-lg'>Med</button>
+        </div>
+
+        <div class='col-sm-1' id='harddiv'>
+            <button id='hard' type = 'button' class='btn btn-danger btn-lg'>Hard</button>
+        </div>
+
+        <div class='col-sm-3' id='emptydiv'>
+
+        </div>
+
+        <div class='col-sm-4'>
+            <form action = "" id="userform">
+                <p id="words">Enter your name for a high score</p>
+                <input id="yourName" name="userName" type="text" value="">
+                <input id="submit" name="submit" type="submit" class="btn btn-success btn-lg">
+            </form>
+        </div>
+
+    </div>
+    <div class = 'row'>
+
+        <div id='div1' class='col-sm-8'>
+        </div>
+
+        <div class='col-sm-4' id="highscore-div">
+            <table id="highscores">
+                <th>HIGH SCORES</th>
+                <tr>
+                    <td id='highscores'>Name</td>
+                    <td id='highscores'>Score</td>
+                </tr>
+            </table>
+        </div>
+        
+    </div>
+    <audio id='boom'>
+        <source src='./Audio/Explosion+3.mp3' type='audio/mp3'/>
+    </audio>
+    <script src='mine.js'></script>
+</body>
+</html>
